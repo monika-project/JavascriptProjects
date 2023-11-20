@@ -1,0 +1,258 @@
+<html>
+
+<head>
+  <title>Learn Javascript</title>
+</head>
+
+</html>
+
+<body>
+  <h1>
+    We are going to learn javascript in one video
+  </h1>
+  <h2> what is javascript</h2>
+  <p>javascript is my fav programming language</p>
+  <hr>
+  <h1 id="my-content"></h1>
+
+  <h2 style="display: none;" id="change-content-heading">My college name is MYCollege</h2>
+  <button onclick="changeContent()">Change</button>
+
+  <script src="myjs.js"></script>
+  <script>
+    // document.write("this is my first line from javascript") 
+    // document.write("<h2>This is second line from javascript</h2>")
+
+    // this is for practice
+    /* 
+    Author :Durgesh
+    City:lucknow
+    */
+
+
+    // document.write(3+4);
+
+    //window.alert("how are you");
+
+    //document.write(prompt("Enter name"))
+
+    //name = prompt("Enter name")
+    //document.write(name)
+
+    // document.write("<br>")
+
+    // document.write(confirm("would you like to exit"))  
+
+    // document.getElementById("my-content").innerHTML = "this is dynamic content"
+
+    //variables
+
+    // var a = 45;
+    //  var b = 23;
+    //    document.write(a+b)
+    //    document.write("<br>")
+    //    document.write("a + b = "+(a+b))
+    //    document.write("<br>")
+    //    document.write("a + b = ",(a+b))
+    //    document.write("<br>")
+    //    document.write("a - b = ",(a - b))
+    //    document.write("<br>")
+    //    document.write("a % b = ",(a % b))
+    //    document.write("<br>")
+    //    document.write("a / b = ",(a / b))
+
+    document.write(typeof a, "<br>")
+    var name = 'techsoft india'
+
+    document.write(typeof name, "<br>")
+
+    let abc = 234
+    document.write(abc, "<br>")
+
+    //keywords:COMPILER ALREADY KNOW THE MEANING
+    //    :NOT START WITH DIGITS
+    //    :$ _ SPECIAL CHARACTERS
+
+    //identifiers:WE CREATED
+
+    //LITERALS:DIRECT REPRESENTATION FIX DATA TYPE
+
+    //DATATYPES:TYPE OF VALUE WE HOLD IN OUR VARIABLES
+
+    var N1 = 56
+    //number:
+    document.write(typeof N1, "<br>")
+
+    var name = "tech india";
+    document.write(typeof name, "<br>")
+    document.write(name.length, "<br>")
+    document.write(name.toUpperCase(), "<br>")
+    document.write(name.toLowerCase(), "<br>")
+    document.write(name.charAt(0), "<br>")  //substring
+
+    //boolean
+    var c = true
+    var d = false
+    document.write(c, "<br>")
+    document.write(d, "<br>")
+    document.write(typeof c, "<br>")
+
+    //object
+
+    var ob = { 'name': 'monika' }
+    document.write(typeof ob, "<br>")
+    document.write(ob['name'], "<br>")
+
+    //ARRAY
+    var A = 56
+    var nams = [23, 32, 12, 32, 23]
+
+    // document.write(nams.length, "<br>")
+    // document.write(nams[4], "<br>")
+    // document.write(typeof nams , "<br>")
+    // var n = prompt("Enter number")
+    // var a=parseInt(n)
+    // if (a > 0) 
+    // {
+    //    document.write("positive")
+    // }
+    // else if(a < 0)
+    // {
+    //   document.write("negative")
+    // }
+    // else{
+    //  document.write("zero")
+    // }
+
+    //loop
+    //starting point:initialization
+    //ending of the loop:
+    //increment/decrement:
+
+    //start :1
+    //end : <=10
+    //step :1 , 1 step
+
+    //  for(var i=1;i<=10;i++)
+    //  {
+    //   document.write("<h2>","hello world",i,"</h2>",)
+    //  }
+
+    // var s = 0
+    // n = parseInt(prompt("Enter number"))
+    // for(var i =1;i<=n;i++)
+    // {
+    //  s = s + i 
+    // }
+    // document.write("sum is ",s)
+
+    var i = 1;
+    while (i <= 10) {
+      document.write(i, "<br>")
+      i++
+    }
+
+    var i = 1;
+    while (true) {
+      document.write("value = ", i, "<br>")
+      if (i == 15) {
+        break;
+      }
+      i++
+    }
+
+    //  for(var i = 1;i<=10;i++)
+    //  {
+    //   document.write("first line", i ,"<br>")
+    //   if(i == 3)
+    //   {
+    //     continue;
+    //   }
+    //   document.write("second line",i ,"<br>")
+    //   document.write("third line", i ,"<br>")
+    //   document.write("+++++++++++++++++++++++","<br>")
+    //  }
+
+    //  var i=1;
+
+    //  do{
+    //    document.write(i, "<br>")
+    //    i++
+    //  }while(i <= 10);
+
+    //  var name=['ram','shyam','john','petter']
+    //  document.write(name.length, "<br>")
+
+    //  for(var i=0;i <= name.length-1;i++)
+    //  {
+    //   document.write(name[i])
+    //  }
+
+    //  document.write("<br")
+
+    //Functions of javascript
+    // set of instructions to perform specific task
+
+    function sayHello() {
+      document.write("Hello World")
+    }
+
+    //calling function
+    sayHello()
+    sayHello()
+    sayHello()
+
+
+    function doSum(a, b) {
+      return a + b;
+    }
+
+    var result = doSum(3, 4)
+
+    document.write("<br")
+    document.write(result)
+
+    doSum()
+
+    function changeContent() {
+      //alert("test")
+
+      var element = document.getElementById("change-content-heading")
+
+      element.innerHTML = "this is new content"
+      element.style.display = "block";
+      element.style.color = "red";
+      element.style.backgroundColor = "yellow"
+
+      //document.getElementsByTagName("body").style.backgroundColor = "blue"
+      document.body.style.backgroundColor = "red"
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+</body>
